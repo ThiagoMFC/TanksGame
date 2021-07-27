@@ -28,12 +28,15 @@ void APawnTurret::Tick(float DeltaTime)
 }
 
 void APawnTurret::CheckFireCondition() {
+
+	//UE_LOG(LogTemp, Warning, TEXT("fire condition check"));
 	
 	if (!PlayerPawn) {
 		return;
 	}
 
 	if (ReturnDistanceToPlayer() <= FireRange) {
+		//UE_LOG(LogTemp, Warning, TEXT("fire range"));
 		Fire();
 	}
 }
