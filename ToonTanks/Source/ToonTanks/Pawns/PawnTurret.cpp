@@ -31,7 +31,7 @@ void APawnTurret::CheckFireCondition() {
 
 	//UE_LOG(LogTemp, Warning, TEXT("fire condition check"));
 	
-	if (!PlayerPawn) {
+	if (!PlayerPawn || !PlayerPawn->GetIsPlayerAlive()) {
 		return;
 	}
 
